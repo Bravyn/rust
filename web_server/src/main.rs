@@ -7,13 +7,13 @@ use rocket::http::Status;
 ///
 /// # Returns
 ///
-/// A static string slice containing "Hello World". This string is returned
+/// A static string slice containing basic greeting. This string is returned
 /// as the response to the HTTP GET request.
 ///
 
 #[get("/")]
 fn index() -> &'static str {
-    "Hello World"
+    "Guten Morgen"
 }
 
 /// A struct representing a message with a single string field.
