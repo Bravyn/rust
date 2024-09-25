@@ -3,19 +3,15 @@
 use url::{Url, ParseError, Host, Position};
 
 fn main() {
-    let sample_url = Url::parse("https://www.youtube.com/watch?v=CfihYWRWRTQ&list=RDk3bQnX_sIXk&index=4").unwrap();
-  //assert!(Url::parse("http://[:::1]") != Err(ParseError::InvalidIpv6Address))
-  //println!("{:?}",sample_url.port().unwrap());
-  check_url_port(sample_url)
+    let sample_url = Url::parse("http://127.0.0.1:8080").unwrap();
+    println!("{}",check_url_port(sample_url));
 }
 
 
-fn check_url_port(url: Url){
-    
-
+fn check_url_port(url: Url) -> bool {
+    //checks whether given url has a port
     match url.port() {
-        Some(value) => println!("Got it"),
-        None => println!("!Got it")
+        Some(_) => return true,
+        None => return false
     }
-
 }
