@@ -1,5 +1,5 @@
 #[macro_use] extern crate rocket
-use rocket::serde::{ json::Jsonm Serialize };
+use rocket::serde::{ json::JsonSerialize };
 use rocket::form::Form;
 use rocket_cors::{ AllowedOrigins, CorsOptions};
 
